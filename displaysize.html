@@ -9,23 +9,29 @@
         #grid{
             border:2px solid black;
             display:grid;
-            grid-template-columns: 1fr 2fr 
+            grid-template-columns: 1fr 2fr;
         }
         div{
-            text-align: center;
             font-size: 50pt;
             font-family: Arial;
             border:3px solid green;
+            text-align: center;
+        }
+        @media(max-width:720px) {
+            body{
+                display:none;
+            }
         }
         a{
             color: red;
             text-decoration: none;
         }
+        
     </style>
     <title>Document</title>
 </head>
 <body>
-    <h1>GRID</h1>
+    <h1>DP size</h1>
     <div id="grid">
         <div>1fr</div>   
         <div style="font-size: large;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel reprehenderit architecto et velit delectus, consectetur recusandae id provident blanditiis fuga distinctio error tempora sit dicta, magnam assumenda incidunt quo quae?</div>
