@@ -3,8 +3,12 @@
 <head>
     <title>Web</title>
     <meta charset="utf-8">
+    
     <title>JS</title>
     <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
         a {
             font-size: large;
             text-decoration: none;
@@ -14,14 +18,18 @@
 </head>
 <body>
     <script>
-        document.write(3/7);
+        document.write(3/7+"   ");
+        function random(){
+            var random = Math.floor(Math.random() * 100);
+            alert(random);
+        }
     </script>
-    hello
     <a href="index.html">Go back</a>
     <input type="button" value="hello" onclick="alert('click')">
     <input type="text" onchange="alert('change')" onkeydown="alert('g!')">
     <input type="text" onkeydown="alert('keydown')">
     <input type="button" value='night' onclick="document.querySelector('body').style.backgroundColor='black';document.querySelector('body').style.color='white';">
     <input type="button" value='day' onclick="document.querySelector('body').style.backgroundColor='white';document.querySelector('body').style.color='black';">
+    <input type="button" value='hello' ondblclick="random()">
 </body>
 </html>
