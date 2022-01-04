@@ -15,21 +15,35 @@
             font-family: Arial;
         }
     </style>
-</head>
-<body>
     <script>
         document.write(3/7+"   ");
         function random(){
-            var random = Math.floor(Math.random() * 100);
-            alert(random);
+            var time=0
+            var rdv=[]
+            while(time<8){
+                var random = Math.floor(Math.random() * 45);
+                if(random in rdv){
+                    time=0
+                    rdv=[]
+                }
+                else{
+                    rdv.push(random);
+                    time=time+1;
+                }
+
+            }
+            alert(rdv);
+            console.log(ErrorEvent)
         }
     </script>
+</head>
+<body>
     <a href="index.html">Go back</a>
     <input type="button" value="hello" onclick="alert('click')">
     <input type="text" onchange="alert('change')" onkeydown="alert('g!')">
     <input type="text" onkeydown="alert('keydown')">
     <input type="button" value='night' onclick="document.querySelector('body').style.backgroundColor='black';document.querySelector('body').style.color='white';">
     <input type="button" value='day' onclick="document.querySelector('body').style.backgroundColor='white';document.querySelector('body').style.color='black';">
-    <input type="button" value='hello' ondblclick="random()">
+    <input type="button" value='hello' onclick="random()">
 </body>
 </html>
