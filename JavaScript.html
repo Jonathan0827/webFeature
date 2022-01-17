@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Web</title>
-    <meta charset="utf-8">
-    
-    <title>JS</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        a {
-            font-size: large;
-            text-decoration: none;
-            font-family: Arial;
-        }
-    </style>
-    <script>
-        document.write(3/7+"   ");
-        function random(){
-            var time=0
-            var rdv=[]
-            while(time<8){
-                var random = Math.floor(Math.random() * 45);
-                if(random in rdv){
-                    time=0
-                    rdv=[]
-                }
-                else{
-                    rdv.push(random);
-                    time=time+1;
-                }
+	<head>
+		<title>Web</title>
+		<meta charset="utf-8" />
+		<title>JS</title>
+		<style>
+			html {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			a {
+				font-size: large;
+				text-decoration: none;
+				font-family: Arial;
+			}
+		</style>
+		<script>
+			document.write(2 ** 0.5 + "   ");
+			document.querySelector("body").dataset.mode = "day";
+		</script>
+	</head>
+	<body>
+		<p onmouseover="style.color='red';" onmouseleave="style.color='black'">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit.
+			Voluptatibus temporibus deserunt eos ducimus, et similique accusamus
+			quisquam asperiores beatae, ut laboriosam reiciendis dolore in
+			inventore nostrum vero recusandae ipsum voluptate.
+		</p>
 
+		<a
+			onmouseover="style.color='red';"
+			onmouseleave="style.color='black'"
+			href="index.html"
+			>Go back</a
+		>
+		<input type="button" value="hello" onclick="alert('click')" />
+		<input type="text" onchange="alert('CHANGE')" />
+		<input type="text" onkeydown="alert('g!')" />
+		<input
+			type="button"
+			value="night"
+			onmouseover="style.color='red';"
+			onmouseleave="style.color='black'"
+			onclick="
+            if(document.querySelector('body').dataset.mode === 'day'){
+                document.querySelector('body').style.backgroundColor = 'black';
+                document.querySelector('body').style.color = 'white';
+                document.querySelector('body').dataset.mode = 'night';
+                this.value = 'day';    
+            } else{
+                document.querySelector('body').style.backgroundColor = 'white';
+                document.querySelector('body').style.color = 'black';
+                document.querySelector('body').dataset.mode = 'day';
+                this.value = 'night';    
             }
-            alert(rdv);
-            console.log(ErrorEvent)
-        }
-    </script>
-</head>
-<body>
-    <a href="index.html">Go back</a>
-    <input type="button" value="hello" onclick="alert('click')">
-    <input type="text" onchange="alert('CHANGE')">
-    <input type="text" onkeydown="alert('g!')">
-    <input type="button" value='night' onclick="document.querySelector('body').style.backgroundColor='black';document.querySelector('body').style.color='white';">
-    <input type="button" value='day' onclick="document.querySelector('body').style.backgroundColor='white';document.querySelector('body').style.color='black';">
-    <input type="button" value='hello' onclick="random()">
-</body>
+            "
+		/>
+		<input
+			type="button"
+			value="Lorem alert"
+			onmouseover="style.color='red';"
+			onmouseleave="style.color='black'"
+			onclick="alert('Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure aut accusamus. Molestiae, laboriosam obcaecati. Odit, maxime voluptas nobis accusamus neque vel culpa laudantium placeat molestiae ipsam illo iste assumenda?')"
+		/>
+	</body>
 </html>

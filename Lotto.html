@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Web</title>
-    <meta charset="utf-8">
-    <title>Lotto</title>
-    <style>
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        a {
-            font-size: large;
-            text-decoration: none;
-            font-family: Arial;
-        }
-    </style>
-    <script>
-        function random(){
-            var time=0
-            var rdv=[]
-            while(rdv.length <= 8){
-                var random = Math.floor(Math.random() * 45+1);
+	<head>
+		<title>Web</title>
+		<meta charset="utf-8" />
+		<title>Lotto</title>
+		<style>
+			body {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			a {
+				font-size: large;
+				text-decoration: none;
+				font-family: Arial;
+			}
+		</style>
+		<script>
+			function random() {
+				var time = 0;
+				var rdv = [];
+				while (rdv.length <= 8) {
+					var random = Math.floor(Math.random() * 45 + 1);
 
-                if(rdv.includes(random)) {
-                    continue;
-                } else {
-                    rdv.push(random);
-                }
-
-            }
-            alert(rdv);
-            console.log(ErrorEvent)
-        }
-    </script>
-</head>
-<body>
-    <a href="index.html">Go back</a>
-    <input type="button" value='hello' onclick="random()">
-</body>
+					if (rdv.includes(random)) {
+						continue;
+					} else {
+						rdv.push(random);
+					}
+				}
+				alert(rdv);
+				console.log("success!");
+			}
+		</script>
+	</head>
+	<body>
+		<a href="index.html">Go back</a>
+		<input type="button" value="wish luck!" onclick="random()" />
+	</body>
 </html>
