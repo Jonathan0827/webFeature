@@ -3,6 +3,7 @@
 	<head>
 		<title>Web</title>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>JS</title>
 		<style>
 			html {
@@ -14,53 +15,66 @@
 				font-family: Arial;
 			}
 		</style>
-		<script>
-			document.write(2 ** 0.5 + "   ");
-			document.querySelector("body").dataset.mode = "day";
-		</script>
 	</head>
-	<body>
-		<p onmouseover="style.color='red';" onmouseleave="style.color='black'">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit.
-			Voluptatibus temporibus deserunt eos ducimus, et similique accusamus
-			quisquam asperiores beatae, ut laboriosam reiciendis dolore in
-			inventore nostrum vero recusandae ipsum voluptate.
-		</p>
-
-		<a
-			onmouseover="style.color='red';"
-			onmouseleave="style.color='black'"
-			href="index.html"
-			>Go back</a
-		>
-		<input type="button" value="hello" onclick="alert('click')" />
-		<input type="text" onchange="alert('CHANGE')" />
-		<input type="text" onkeydown="alert('g!')" />
-		<input
-			type="button"
-			value="night"
-			onmouseover="style.color='red';"
-			onmouseleave="style.color='black'"
-			onclick="
-            if(document.querySelector('body').dataset.mode === 'day'){
-                document.querySelector('body').style.backgroundColor = 'black';
-                document.querySelector('body').style.color = 'white';
-                document.querySelector('body').dataset.mode = 'night';
-                this.value = 'day';    
-            } else{
-                document.querySelector('body').style.backgroundColor = 'white';
-                document.querySelector('body').style.color = 'black';
-                document.querySelector('body').dataset.mode = 'day';
-                this.value = 'night';    
-            }
-            "
-		/>
-		<input
-			type="button"
-			value="Lorem alert"
-			onmouseover="style.color='red';"
-			onmouseleave="style.color='black'"
-			onclick="alert('Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure aut accusamus. Molestiae, laboriosam obcaecati. Odit, maxime voluptas nobis accusamus neque vel culpa laudantium placeat molestiae ipsam illo iste assumenda?')"
-		/>
-	</body>
+	<div>
+		<body>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				Voluptatibus temporibus deserunt eos ducimus, et similique
+				accusamus quisquam asperiores beatae, ut laboriosam reiciendis
+				dolore in inventore nostrum vero recusandae ipsum voluptate.
+			</p>
+			<a href="index.html">Go back</a>
+			<input type="button" value="hello" onclick="alert('click')" />
+			<br />
+			<input type="text" onchange="alert('CHANGE')" />
+			<br />
+			<input type="text" onkeydown="alert('g!')" />
+			<br />
+			<input type="button" value="night" onclick="colorScheme(this)" />
+			<br />
+			<input
+				type="button"
+				value="Lorem alert"
+				onclick="alert('Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure aut accusamus. Molestiae, laboriosam obcaecati. Odit, maxime voluptas nobis accusamus neque vel culpa laudantium placeat molestiae ipsam illo iste assumenda?')"
+			/>
+			<br />
+			<h1>1+1=3!!!</h1>
+			<ol>
+				<script>
+					var i = 0;
+					while (i < 3) {
+						document.write("<li>1</li>");
+						i = i + 1;
+					}
+					document.write(2 ** 0.5 + "<br>");
+					document.querySelector("body").dataset.mode = "day";
+					document.write(1 - 1 === 0 + "<br>");
+					function colorScheme(i) {
+						if (
+							document.querySelector("body").dataset.mode ===
+							"day"
+						) {
+							document.querySelector(
+								"body"
+							).style.backgroundColor = "black";
+							document.querySelector("body").style.color =
+								"white";
+							document.querySelector("body").dataset.mode =
+								"night";
+							i.value = "day";
+						} else {
+							document.querySelector(
+								"body"
+							).style.backgroundColor = "white";
+							document.querySelector("body").style.color =
+								"black";
+							document.querySelector("body").dataset.mode = "day";
+							i.value = "night";
+						}
+					}
+				</script>
+			</ol>
+		</body>
+	</div>
 </html>
