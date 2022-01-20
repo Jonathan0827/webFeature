@@ -3,6 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="google-signin-client_id"
+			content="705554831995-h1fga4p5sl6msf2ger19a4k74f54q327.apps.googleusercontent.com"
+		/>
 		<title>Document</title>
 		<style>
 			html {
@@ -18,6 +22,7 @@
 		</style>
 	</head>
 	<body>
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 		<p>
 			Lorem ipsum dolor sit amet consectetur adipisicing elit.
 			Voluptatibus temporibus deserunt eos ducimus, et similique accusamus
@@ -25,16 +30,12 @@
 			inventore nostrum vero recusandae ipsum voluptate.
 		</p>
 		<a href="index.html">Go back</a>
-		<input type="button" value="hello" onclick="alert('click')" />
-		<input type="text" onchange="alert('CHANGE')" />
-		<input type="text" onkeydown="alert('g!')" />
-		<input type="button" value="night" onclick="colorScheme(this)" />
-		<input
-			type="button"
-			value="Lorem alert"
-			onclick="alert('Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate iure aut accusamus. Molestiae, laboriosam obcaecati. Odit, maxime voluptas nobis accusamus neque vel culpa laudantium placeat molestiae ipsam illo iste assumenda?')"
-		/>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script
+			src="https://apis.google.com/js/platform.js"
+			async
+			defer
+		></script>
+		">
 		<script src="main.js"></script>
 	</body>
 </html>
