@@ -8,6 +8,12 @@
 		/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
+	<style>
+		html {
+			font-family: Arial, Helvetica, sans-serif;
+			text-align: center;
+		}
+	</style>
 	<body>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script
@@ -23,8 +29,8 @@
 					console.log("logined");
 					loginBtn.value = "Logout";
 					var profile = gauth.currentUser.get().getBasicProfile();
-					nameTxt.innerHTML =
-						"Welcome <strong>" + profile.getName() + "</strong> ";
+					console.log(profile);
+					nameTxt.innerHTML = "Welcome " + profile.getName();
 				} else {
 					console.log("logouted");
 					loginBtn.value = "Login";
@@ -53,6 +59,7 @@
 		</script>
 
 		<a href="index.html">Go back</a>
+		<span id="name"> </span>
 		<input
 			type="button"
 			id="loginBtn"
@@ -73,6 +80,5 @@
   }
 "
 		/>
-		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	</body>
 </html>
