@@ -2,15 +2,17 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
+		<meta
+			name="google-signin-client_id"
+			content="705554831995-v5je3ln4up4rsfqjps8fnom042rdc5ug.apps.googleusercontent.com"
+		/>
 	</head>
 	<body>
-		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 		<script
 			src="https://apis.google.com/js/platform.js?onload=init"
 			async
 			defer
 		></script>
-
 		<a href="index.html">Go back</a>
 		<input
 			type="button"
@@ -30,7 +32,6 @@
 		}
 	  "
 		/>
-		<!-- 
 		<script>
 			function init() {
 				console.log("log");
@@ -43,6 +44,7 @@
 					console.log("gauth success");
 				});
 			}
-		</script> -->
+		</script>
+		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	</body>
 </html>
