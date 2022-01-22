@@ -6,45 +6,73 @@
 			name="google-signin-client_id"
 			content="705554831995-v5je3ln4up4rsfqjps8fnom042rdc5ug.apps.googleusercontent.com"
 		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<body>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script
 			src="https://apis.google.com/js/platform.js?onload=init"
 			async
 			defer
 		></script>
+		<script>
+			function checkLoginStatus() {
+				var loginBtn = document.querySelector("#loginBtn");
+				var nameTxt = document.querySelector("#name");
+				if (gauth.isSignedIn.get()) {
+					console.log("logined");
+					loginBtn.value = "Logout";
+					var profile = gauth.currentUser.get().getBasicProfile();
+					nameTxt.innerHTML =
+						"Welcome <strong>" + profile.getName() + "</strong> ";
+				} else {
+					console.log("logouted");
+					loginBtn.value = "Login";
+					nameTxt.innerHTML = "";
+				}
+			}
+			function init() {
+				console.log("init");
+				gapi.load("auth2", function () {
+					console.log("auth2");
+					window.gauth = gapi.auth2.init({
+						client_id:
+							"705554831995-v5je3ln4up4rsfqjps8fnom042rdc5ug.apps.googleusercontent.com",
+					});
+					gauth.then(
+						function () {
+							console.log("googleAuth success");
+							checkLoginStatus();
+						},
+						function () {
+							console.log("googleAuth fail");
+						}
+					);
+				});
+			}
+		</script>
+
 		<a href="index.html">Go back</a>
 		<input
 			type="button"
 			id="loginBtn"
 			value="checking..."
 			onclick="
-		if(this.value === 'Login'){
-		  gauth.signIn().then(function(){
-			console.log('gauth.signIn()');
-			checkLoginStatus();
-		  });
-		} else {
-		  gauth.signOut().then(function(){
-			console.log('gauth.signOut()');
-			checkLoginStatus();
-		  });
-		}
-	  "
+  if(this.value === 'Login'){
+    gauth.signIn({
+      scope:'https://www.googleapis.com/auth/calendar'
+    }).then(function(){
+      console.log('gauth.signIn()');
+      checkLoginStatus();
+    });
+  } else {
+    gauth.signOut().then(function(){
+      console.log('gauth.signOut()');
+      checkLoginStatus();
+    });
+  }
+"
 		/>
-		<script>
-			function init() {
-				console.log("log");
-				gapi.load("auth2", function () {});
-				var gauth = gapi.auth.init({
-					client_id:
-						'705554831995-v5je3ln4up4rsfqjps8fnom042rdc5ug.apps.googleusercontent.com"',
-				});
-				gauth.then(function () {
-					console.log("gauth success");
-				});
-			}
-		</script>
 		<div class="g-signin2" data-onsuccess="onSignIn"></div>
 	</body>
 </html>
