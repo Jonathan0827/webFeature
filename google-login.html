@@ -60,7 +60,7 @@
 			onclick="
   if(this.value === 'Login'){
     gauth.signIn({
-      scope:'https://www.googleapis.com/auth/calendar'
+      scope:'https://www.googleapis.com/auth/userinfo.email',
     }).then(function(){
       console.log('gauth.signIn()');
       checkLoginStatus();
