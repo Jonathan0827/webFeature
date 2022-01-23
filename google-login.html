@@ -2,10 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta
-			name="google-signin-client_id"
-			content="705554831995-v5je3ln4up4rsfqjps8fnom042rdc5ug.apps.googleusercontent.com"
-		/>
+		<meta name="google-signin-client_id" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
 	<style>
@@ -42,8 +39,7 @@
 				gapi.load("auth2", function () {
 					console.log("auth2");
 					window.gauth = gapi.auth2.init({
-						client_id:
-							"705554831995-v5je3ln4up4rsfqjps8fnom042rdc5ug.apps.googleusercontent.com",
+						client_id: "",
 					});
 					gauth.then(
 						function () {
