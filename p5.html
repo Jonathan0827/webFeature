@@ -17,8 +17,11 @@
             createCanvas(windowWidth-100, windowHeight-100 );
             background('gray');
         }
-        function draw(){
-            circle(mouseX, mouseY, random(100));
+        function mouseDragged(){
+            px = pow(mouseX-mouseY, 2)
+            py = pow(mouseY-mouseX, 2)
+            speed = sqrt(px+py)
+            circle(mouseX, mouseY, speed-100);
         }
     </script>
 </body>
