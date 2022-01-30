@@ -7,16 +7,6 @@ setInterval(function () {
 	var h = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60) - 1);
 	var m = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60) - 1);
 	var s = Math.ceil((gap % (1000 * 60)) / 1000 - 1);
-	// document.getElementById("count").innerHTML =
-	// 	"개학까지 " +
-	// 	d +
-	// 	"일 " +
-	// 	h +
-	// 	"시간 " +
-	// 	m +
-	// 	"분 " +
-	// 	s +
-	// 	"초 남았습니다.";
 	if (gap <= 0) {
 		document.getElementById("count").innerHTML = "개학했습니다.";
 	} else {
