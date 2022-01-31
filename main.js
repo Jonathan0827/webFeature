@@ -1,13 +1,6 @@
 document.querySelector("body").dataset.mode = "day";
 
 var cmode = document.querySelector("body").dataset.mode;
-var workers = {
-	cleaner: "clean",
-	designer: "design",
-};
-for (var key in workers) {
-	document.write(key + ":" + workers[key] + "<br>");
-}
 function colorScheme(i) {
 	if (cmode === "day") {
 		document.querySelector("body").style.backgroundColor = "black";
