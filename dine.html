@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>dinner</title>
+		<style>
+			html {
+				font-family: Arial, Helvetica, sans-serif;
+				text-align: center;
+				font-size: larger;
+			}
+			a {
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			const menus = [];
+			const fdine = "";
+			function dinner() {
+				menus.push(document.getElementById("menu").value);
+				document.getElementById("menu").value = "";
+			}
+			function choose() {
+				const random = Math.floor(Math.random() * menus.length);
+				alert(menus[random]);
+			}
+		</script>
+		저녁밥
+		<br />
+		<input type="text" id="menu" />
+		<input type="button" value="add" onclick="dinner()" />
+		<input type="button" value="choose" onclick="choose()" />
+		<br />
+		<a href="index.html">Go back</a>
+	</body>
+</html>
