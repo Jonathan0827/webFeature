@@ -19,13 +19,17 @@
 		<script>
 			const menus = [];
 			const fdine = "";
+			const otmenu = [];
 			function dinner() {
 				menus.push(document.getElementById("menu").value);
 				document.getElementById("menu").value = "";
+				otmenu.push(document.getElementById("menu").value);
+				document.getElementById("mnus").innerHTML = otmenu;
 			}
 			function choose() {
 				const random = Math.floor(Math.random() * menus.length);
 				alert(menus[random]);
+				menus = [];
 			}
 		</script>
 		저녁밥
@@ -33,6 +37,8 @@
 		<input type="text" id="menu" />
 		<input type="button" value="add" onclick="dinner()" />
 		<input type="button" value="choose" onclick="choose()" />
+		<br />
+		<div id="mnus"></div>
 		<br />
 		<a href="index.html">Go back</a>
 	</body>
