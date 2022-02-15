@@ -19,12 +19,21 @@
 		<script>
 			const menus = [];
 			const fdine = "";
+			semmenu = "";
 			const otmenu = [];
 			function dinner() {
 				menus.push(document.getElementById("menu").value);
+				semmenu = document.getElementById("menu").value;
+				if (document.getElementById("menu").value == "") {
+					document.getElementById("mnus").innerHTML = semmenu;
+				} else {
+					document.getElementById("mnus").innerHTML =
+						document.getElementById("mnus").innerHTML +
+						", " +
+						semmenu;
+				}
 				document.getElementById("menu").value = "";
 				otmenu.push(document.getElementById("menu").value);
-				document.getElementById("mnus").innerHTML = otmenu;
 			}
 			function choose() {
 				const random = Math.floor(Math.random() * menus.length);
@@ -38,7 +47,7 @@
 		<input type="button" value="add" onclick="dinner()" />
 		<input type="button" value="choose" onclick="choose()" />
 		<br />
-		<div id="mnus"></div>
+		<p id="mnus"></p>
 		<br />
 		<a href="index.html">Go back</a>
 	</body>
