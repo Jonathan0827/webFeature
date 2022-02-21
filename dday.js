@@ -12,6 +12,6 @@ setInterval(function () {
 	} else {
 		document.getElementById(
 			"count"
-		).innerHTML = `생일까지 ${d}일 ${h}시간 ${m}분 ${s}초 남았습니다.`;
+		).innerHTML = `개학까지 ${d}일 ${h}시간 ${m}분 ${s}초 남았습니다.`;
 	}
 }, 1000);
