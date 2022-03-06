@@ -14,4 +14,4 @@ setInterval(function () {
 			"count"
 		).innerHTML = `Apple Peek Performance까지 ${d}일 ${h}시간 ${m}분 ${s}초 남았습니다.`;
 	}
-}, 1000);
+}, 1);
