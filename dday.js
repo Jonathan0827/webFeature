@@ -8,7 +8,7 @@ setInterval(function () {
 	var m = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60) - 1);
 	var s = Math.ceil((gap % (1000 * 60)) / 1000 - 1);
 	if (gap <= 0) {
-		document.getElementById("count").innerHTML = "";
+		document.getElementById("count").innerHTML = "격리 해제!";
 	} else {
 		document.getElementById(
 			"count"
