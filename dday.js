@@ -1,4 +1,4 @@
-var dday = new Date("March 9, 2022, 00:03:00").getTime();
+var dday = new Date("April 2, 2022, 00:00:01").getTime();
 
 setInterval(function () {
 	var today = new Date().getTime();
@@ -12,6 +12,6 @@ setInterval(function () {
 	} else {
 		document.getElementById(
 			"count"
-		).innerHTML = `Apple Peek Performance까지 ${d}일 ${h}시간 ${m}분 ${s}초 남았습니다.`;
+		).innerHTML = `격리 해제까지 ${d}일 ${h}시간 ${m}분 ${s}초 남았습니다.`;
 	}
 }, 1);
