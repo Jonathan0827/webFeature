@@ -24,6 +24,10 @@
 					Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 					"Helvetica Neue", sans-serif;
 			}
+			.line button{
+				text-align:initial;
+				color: #333;
+			}
 			.topnav {
 				background-color: #333;
 				overflow: hidden;
@@ -80,8 +84,10 @@
 				>JS</a
 			>
 
-			<a href="grid.html"
-				><button style="color: darkblue">grid</button></a
+			<a onmouseover="style.color='red';"
+			onmouseleave="style.color='blue';"
+			href="grid.html"
+				>grid</a
 			>
 			<a
 				onmouseover="style.color='red';"
@@ -130,6 +136,13 @@
 
 		<script>
 			document.write("hello");
+			function copy() {
+ 				var copyText = document.getElementById("cotxt");
+				copyText.select(); 
+				copyText.setSelectionRange(0, 99999);
+				navigator.clipboard.writeText(copyText.value);
+				alert("Copied the text: " + copyText.value);
+			}
 		</script>
 		<script src="main.js"></script>
 	</body>
