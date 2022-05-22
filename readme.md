@@ -1,3 +1,3 @@
 # webFeature
-## The old version of jonathan0827.github.io
+## The old version of jonathan.kro.kr
 Won't be updated.
